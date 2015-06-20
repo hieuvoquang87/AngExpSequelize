@@ -1,0 +1,6 @@
+{
+    "name": "NodeTemplate",
+    "version": "1.0.0",
+    "description": "NodeJS Application",
+    "main": "config.js"
+}

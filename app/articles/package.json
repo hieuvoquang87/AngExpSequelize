@@ -1,0 +1,10 @@
+{
+    "name": "NodeTemplate",
+    "version": "1.0.0",
+    "description": "NodeJS Application",
+    "main": "app.js",
+    "dependencies": {
+        "express": "^4.2.0",
+        "mongoose": "^3.8.8"
+    }
+}

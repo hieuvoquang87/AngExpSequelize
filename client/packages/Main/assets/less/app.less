@@ -1,0 +1,97 @@
+/* app css stylesheet */
+@border-color: #dddddd;
+@font-size-label: 18px;
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.space-top-5 {
+  margin-top: 5px;
+};
+.space-top-10 {
+  margin-top: 10px;
+};
+
+.space-top-15 {
+  margin-top: 15px;
+};
+.space-top-20 {
+  margin-top: 5px;
+};
+.font-size-label {
+  font-size: @font-size-label;
+};
+.border-top {
+  border-top: solid 1px @border-color;
+};
+
+.border-bottom {
+  border-bottom: solid 1px @border-color;
+};
+
+.border-right {
+  border-right: solid 1px @border-color;
+};
+
+.border-left {
+  border-left: solid 1px @border-color;
+};
+
+.border-left-right-bottom {
+  border-left: solid 1px @border-color;
+  border-right: solid 1px @border-color;
+  border-bottom: solid 1px @border-color;
+};
+
+.padding-10 {
+  padding: 10px
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.text-align-right {
+  text-align: right;
+}
+.no-border-right {
+  border-right: 0px;
+}
+.no-border-top {
+  border-right: 0px;
+}
+.no-side-border {
+  border-right: 0px;
+  border-left: 0px;
+}
+
+.no-padding {
+  padding: 0px;
+}

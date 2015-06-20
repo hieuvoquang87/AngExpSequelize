@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row border-left-right-bottom">
+        <div class="col-lg-3 no-padding" ng-init="selectedItem = 1">
+            <div class="panel-heading border-bottom">
+                <h3 class="panel-title">Friend List</h3>
+            </div>
+            <a class="list-group-item no-side-border" ng-repeat="conversation in currentUser.conversations">
+                {{conversation.sender}}
+            </a>
+        </div>
+
+        <div class="col-lg-9 no-padding border-left" style="position:relative">
+            <div style="height: 500px">
+                ---- Create User ----
+                <form ng-submit="createUser()">
+                    <input type="text" ng-model="newEmail">
+                    <input type="text" ng-model="newPassword">
+                    <input type="submit" value="Create User">
+                </form>
+
+                ---- Login ----
+                <form ng-submit="doLogin()">
+                    <input type="text" ng-model="login.email">
+                    <input type="text" ng-model="login.password">
+                    <input type="submit" value="Login">
+                </form>
+                <div>
+                    {{currentUser.name}}
+                </div>
+                ---- Add Friend ----
+                <form ng-submit="doAddFriend()">
+                    <input type="text" ng-model="request.friendName">
+                    <input type="submit" value="Add Friend">
+                </form>
+                ---- Conversation ----
+                <form ng-submit="sendMessage()">
+                    Recipient: <input type="text" ng-model="sendingMessage.recipientName">
+                    Content: <input type="text" ng-model="sendingMessage.content">
+                    <input type="submit" value="Send">
+                </form>
+
+                <div ng-repeat="conversation in currentUser.conversations" style="display: inline-block">
+                    <div class="border-left-right-bottom">
+                        ---- Conversation with {{conversation.sender}} ----
+                        <div ng-repeat="message in conversation.messages">
+                            {{ message.from }}: {{ message.content }}
+                        </div>
+                    </div>
+                </div></br>
+
+                <ul class="chatbox">
+                    <li ng-repeat="message in messages">{{ message.from }}: {{ message.content }}</li>
+                </ul>
+                <form style="position:absolute;bottom:0; left:0;" ng-submit="addMessage()">
+                    <input type="text" ng-model="message">
+                    <input type="submit" value="Add Message">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

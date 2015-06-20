@@ -1,0 +1,43 @@
+<header role="banner" id="demo-nav">
+    <nav class="navbar-default navbar-static-top border-bottom">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">My Web-App</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" ng-init="selectedTab = 1;">
+                    <li ng-class="{active: selectedTab == 1}" ng-click="selectedTab = 1;">
+                        <a href="#/home">Home</a>
+                    </li>
+                    <li ng-class="{active: selectedTab == 2}" ng-click="selectedTab = 2;">
+                        <a href="#/articles">Articles</a>
+                    </li>
+                    <li ng-class="{active: selectedTab == 3}" ng-click="selectedTab = 3;">
+                        <a href="#/chatapp">Chat App</a>
+                    </li>
+                    <li ng-class="{active: selectedTab == 4}" ng-click="selectedTab = 4;">
+                        <a href="#/articles">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="#/">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div ui-view></div>
+
+<div class="container">
+    <div class="navbar space-top-10 border-top">
+        Developed by Hieu Q Vo
+    </div>
+</div>

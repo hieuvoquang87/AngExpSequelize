@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-3 col-md-3">
+        <div class="list-group">
+            <a href="#" class="list-group-item active">
+                All Categories
+            </a>
+            <a href="#" class="list-group-item" ng-repeat="category in categories">
+                {{category.name}}
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-9 col-md-9">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." ng-model='queryString'>
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click='searchArticlesByTitle()'>Search</button>
+      </span>
+        </div>
+        <div style="margin-top: 10px">
+            <div ng-repeat="article in articles">
+                <div article-preview-render data="article"></div>
+            </div>
+        </div>
+    </div>
+</div>

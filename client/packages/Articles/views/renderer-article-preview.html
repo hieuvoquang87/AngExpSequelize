@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            {{data.title}}
+            <button class="btn btn-default btn-sm float-right" style="padding: 0px 3px" ng-click="updateArticle()"><span class="glyphicon glyphicon-pencil"></span></button>
+        </h3>
+
+    </div>
+    <div class="panel-body">
+        <p ng-bind-html="data.contentBrief"></p>
+    </div>
+    <div class="panel-footer text-align-right">Author: {{data.author}}</div>
+</div>
